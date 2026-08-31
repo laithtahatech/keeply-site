@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keeply - Secure Personal Vault</title>
+
+    <meta
+        name="description"
+        content="Keeply is a secure personal vault for passwords, bookmarks, media, documents, and encrypted backups."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #071a16;
+            color: #f5f7f6;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: min(100% - 40px, 1000px);
+            margin: auto;
+        }
+
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #42d6a4;
+        }
+
+        nav a {
+            color: #dce7e3;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #42d6a4;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+
+        .hero h1 {
+            margin: 0 0 20px;
+            font-size: clamp(42px, 8vw, 72px);
+        }
+
+        .hero h1 span {
+            color: #42d6a4;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #b8c8c3;
+            font-size: 19px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 24px;
+            border-radius: 10px;
+            background: #42d6a4;
+            color: #061511;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            padding-bottom: 80px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.035);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #42d6a4;
+        }
+
+        .card p {
+            color: #b8c8c3;
+        }
+
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: #8fa19b;
+        }
+
+        footer a {
+            color: #42d6a4;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">Keeply</div>
+
+        <nav>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Your data.<br><span>Your vault.</span></h1>
+
+            <p>
+                Keeply is a personal security vault designed to help you
+                securely organize passwords, bookmarks, media, documents,
+                and backups.
+            </p>
+
+            <a class="button" href="privacy.html">
+                Privacy Policy
+            </a>
+        </div>
+    </section>
+
+    <section class="container features">
+
+        <div class="card">
+            <h3>Passwords</h3>
+            <p>
+                Keep your passwords and account information organized
+                inside your personal vault.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bookmarks</h3>
+            <p>
+                Store and organize important links for quick access.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Media & Documents</h3>
+            <p>
+                Organize your personal media and documents inside Keeply.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Google Drive Backup</h3>
+            <p>
+                Keeply can use your Google Drive account to store
+                application backups associated with your account.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div>© 2026 Keeply</div>
+
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
