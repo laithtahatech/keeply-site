@@ -1,815 +1,1032 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Privacy Policy — Keeply</title>
-
-    <meta
-        name="description"
-        content="Privacy Policy for Keeply, an independent software development project."
-    >
-
-    <meta name="theme-color" content="#1877F2">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            background: #ffffff;
-            color: #1c1e21;
-            line-height: 1.75;
-        }
-
-        a {
-            color: #1877F2;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            width: min(900px, calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-        /* =========================
-           HEADER
-        ========================== */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Keeply — Secure Personal Vault</title>
+
+  <meta
+    name="description"
+    content="Keeply is a personal software development project for securely organizing passwords, bookmarks, media, documents, and backups."
+  >
+
+  <meta name="theme-color" content="#1877F2">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: #ffffff;
+      color: #1c1e21;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e4e6eb;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 22px;
+      font-weight: 700;
+      color: #1877F2;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+      background: #1877F2;
+      color: #ffffff;
+
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 15px;
+      font-weight: 600;
+      color: #65676b;
+    }
 
-            background: rgba(255, 255, 255, 0.96);
-            border-bottom: 1px solid #e4e6eb;
+    .nav-links a:hover {
+      color: #1877F2;
+    }
 
-            backdrop-filter: blur(10px);
-        }
-
-        .header-inner {
-            min-height: 70px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 20px;
-        }
+    .nav-button {
+      padding: 9px 18px;
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            color: #1877F2;
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        .brand:hover {
-            text-decoration: none;
-        }
+      border-radius: 7px;
+      background: #1877F2;
+      color: #ffffff !important;
 
-        .brand-icon {
-            width: 38px;
-            height: 38px;
+      transition: 0.2s ease;
+    }
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    .nav-button:hover {
+      background: #166fe5;
+    }
 
-            border-radius: 10px;
+    /* =========================
+       HERO
+    ========================= */
 
-            background: #1877F2;
-            color: #ffffff;
+    .hero {
+      padding: 100px 0 90px;
 
-            font-weight: 700;
-        }
+      background:
+        linear-gradient(
+          180deg,
+          #f0f6ff 0%,
+          #ffffff 100%
+        );
+    }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 22px;
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
 
-            font-size: 14px;
-            font-weight: 600;
-        }
+      text-align: center;
+    }
 
-        nav a {
-            color: #65676b;
-        }
+    .badge {
+      display: inline-flex;
+      align-items: center;
 
-        nav a:hover {
-            color: #1877F2;
-            text-decoration: none;
-        }
+      padding: 7px 14px;
+      margin-bottom: 24px;
 
-        /* =========================
-           MAIN
-        ========================== */
+      border: 1px solid #d8e8ff;
+      border-radius: 999px;
 
-        main {
-            padding: 80px 0 100px;
-        }
+      background: #eaf3ff;
+      color: #1877F2;
 
-        .page-header {
-            margin-bottom: 50px;
-        }
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-        .badge {
-            display: inline-block;
+    .hero h1 {
+      margin-bottom: 22px;
 
-            margin-bottom: 18px;
-            padding: 7px 13px;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2px;
 
-            border: 1px solid #d8e8ff;
-            border-radius: 999px;
+      color: #1c1e21;
+    }
 
-            background: #eaf3ff;
-            color: #1877F2;
+    .hero h1 span {
+      color: #1877F2;
+    }
 
-            font-size: 13px;
-            font-weight: 700;
-        }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 34px;
 
-        h1 {
-            margin-bottom: 12px;
+      font-size: 20px;
+      color: #65676b;
+    }
 
-            font-size: clamp(38px, 6vw, 56px);
-            line-height: 1.1;
-            letter-spacing: -1.5px;
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
 
-            color: #1c1e21;
-        }
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-        .updated {
-            color: #65676b;
-            font-size: 14px;
-        }
+      padding: 13px 24px;
 
-        /* =========================
-           CONTENT
-        ========================== */
+      border-radius: 8px;
 
-        .intro {
-            margin-bottom: 35px;
+      font-size: 16px;
+      font-weight: 700;
 
-            color: #4b4f52;
-            font-size: 17px;
-        }
+      transition: 0.2s ease;
+    }
 
-        .notice {
-            margin: 30px 0;
-            padding: 22px 24px;
+    .primary-button {
+      background: #1877F2;
+      color: #ffffff;
+    }
 
-            border: 1px solid #d8e8ff;
-            border-left: 4px solid #1877F2;
-            border-radius: 10px;
+    .primary-button:hover {
+      background: #166fe5;
+      transform: translateY(-1px);
+    }
 
-            background: #f7faff;
-        }
+    .secondary-button {
+      background: #ffffff;
+      color: #1877F2;
+      border: 1px solid #ccd0d5;
+    }
 
-        .notice strong {
-            color: #1877F2;
-        }
+    .secondary-button:hover {
+      background: #f0f2f5;
+    }
 
-        section {
-            margin-top: 48px;
-        }
+    /* =========================
+       SECTION
+    ========================= */
 
-        h2 {
-            margin-bottom: 15px;
+    section {
+      padding: 90px 0;
+    }
 
-            color: #1877F2;
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 50px;
 
-            font-size: 27px;
-            line-height: 1.3;
-        }
+      text-align: center;
+    }
 
-        h3 {
-            margin-top: 28px;
-            margin-bottom: 10px;
+    .section-header h2 {
+      margin-bottom: 12px;
 
-            color: #1c1e21;
-            font-size: 19px;
-        }
+      font-size: 38px;
+      line-height: 1.2;
 
-        p {
-            margin-bottom: 16px;
-            color: #4b4f52;
-            font-size: 16px;
-        }
+      color: #1c1e21;
+    }
 
-        ul {
-            margin: 12px 0 20px;
-            padding-left: 25px;
-        }
+    .section-header p {
+      font-size: 17px;
+      color: #65676b;
+    }
 
-        li {
-            margin-bottom: 9px;
-            color: #4b4f52;
-        }
+    /* =========================
+       ABOUT
+    ========================= */
 
-        code {
-            padding: 2px 6px;
+    .about {
+      background: #ffffff;
+    }
 
-            border-radius: 5px;
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
 
-            background: #f0f2f5;
-            color: #1877F2;
+      padding: 35px;
 
-            font-family: Consolas, Monaco, monospace;
-            font-size: 14px;
-        }
+      border: 1px solid #e4e6eb;
+      border-radius: 14px;
 
-        .google-data {
-            margin: 30px 0;
-            padding: 28px;
+      background: #ffffff;
 
-            border: 1px solid #d8e8ff;
-            border-radius: 12px;
+      box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.04);
+    }
 
-            background: #f7faff;
-        }
+    .about-box h3 {
+      margin-bottom: 14px;
 
-        .google-data h3 {
-            color: #1877F2;
-        }
+      font-size: 25px;
+      color: #1877F2;
+    }
 
-        /* =========================
-           FOOTER
-        ========================== */
+    .about-box p {
+      color: #65676b;
+      font-size: 16px;
+    }
 
-        footer {
-            padding: 35px 0;
+    .project-type {
+      display: inline-block;
 
-            border-top: 1px solid #e4e6eb;
+      margin-top: 20px;
+      padding: 7px 12px;
 
-            background: #ffffff;
+      border-radius: 6px;
 
-            text-align: center;
-        }
+      background: #eaf3ff;
+      color: #1877F2;
 
-        footer p {
-            margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
 
-            color: #65676b;
-            font-size: 13px;
-        }
+    /* =========================
+       FEATURES
+    ========================= */
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 18px;
+    .features {
+      background: #f7f8fa;
+    }
 
-            font-size: 14px;
-        }
+    .feature-grid {
+      display: grid;
 
-        .footer-links a {
-            color: #65676b;
-        }
+      grid-template-columns:
+        repeat(3, 1fr);
 
-        .footer-links a:hover {
-            color: #1877F2;
-        }
+      gap: 20px;
+    }
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
+    .feature-card {
+      padding: 28px;
 
-        @media (max-width: 650px) {
+      border: 1px solid #e4e6eb;
+      border-radius: 12px;
 
-            .container {
-                width: min(100% - 30px, 900px);
-            }
+      background: #ffffff;
 
-            .header-inner {
-                min-height: 64px;
-            }
+      transition: 0.2s ease;
+    }
 
-            nav {
-                gap: 12px;
-            }
+    .feature-card:hover {
+      transform: translateY(-4px);
 
-            nav a:nth-child(2) {
-                display: none;
-            }
+      box-shadow:
+        0 8px 25px rgba(24, 119, 242, 0.08);
+    }
 
-            main {
-                padding: 60px 0 75px;
-            }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
 
-            section {
-                margin-top: 40px;
-            }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-            .google-data {
-                padding: 22px;
-            }
-        }
-    </style>
+      margin-bottom: 18px;
+
+      border-radius: 10px;
+
+      background: #eaf3ff;
+      color: #1877F2;
+
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 9px;
+
+      font-size: 19px;
+    }
+
+    .feature-card p {
+      color: #65676b;
+      font-size: 15px;
+    }
+
+    /* =========================
+       TECHNOLOGY
+    ========================= */
+
+    .technology {
+      background: #ffffff;
+    }
+
+    .tech-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech {
+      padding: 10px 17px;
+
+      border: 1px solid #d8e8ff;
+      border-radius: 8px;
+
+      background: #f0f6ff;
+      color: #1877F2;
+
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       DEVELOPMENT
+    ========================= */
+
+    .development {
+      background: #f7f8fa;
+    }
+
+    .development-box {
+      max-width: 850px;
+      margin: 0 auto;
+
+      padding: 35px;
+
+      border-left: 4px solid #1877F2;
+      border-radius: 8px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .development-box h3 {
+      margin-bottom: 15px;
+
+      font-size: 24px;
+    }
+
+    .development-box p {
+      color: #65676b;
+      margin-bottom: 15px;
+    }
+
+    .development-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .links {
+      background: #ffffff;
+    }
+
+    .links-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .link-card {
+      display: block;
+
+      padding: 24px;
+
+      border: 1px solid #e4e6eb;
+      border-radius: 10px;
+
+      background: #ffffff;
+
+      text-align: center;
+
+      transition: 0.2s ease;
+    }
+
+    .link-card:hover {
+      border-color: #1877F2;
+      background: #f7faff;
+    }
+
+    .link-card strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #1877F2;
+      font-size: 17px;
+    }
+
+    .link-card span {
+      color: #65676b;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 35px 0;
+
+      border-top: 1px solid #e4e6eb;
+
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: #1877F2;
+      font-weight: 700;
+    }
+
+    .footer-text {
+      color: #65676b;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+
+      color: #65676b;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #1877F2;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 0 70px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .about-box {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container header-inner">
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
-        <a href="index.html" class="brand">
-            <span class="brand-icon">K</span>
-            Keeply
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="brand">
+        <span class="brand-icon">K</span>
+        Keeply
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+
+        <a
+          href="https://github.com/laithtahatech"
+          target="_blank"
+          class="nav-button"
+        >
+          GitHub
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero">
+
+    <div class="container hero-content">
+
+      <div class="badge">
+        Software Development Project
+      </div>
+
+      <h1>
+        Keep your digital life
+        <span>organized.</span>
+      </h1>
+
+      <p>
+        Keeply is a personal software development project focused on
+        building a secure and organized personal vault for passwords,
+        bookmarks, media, documents, and backups.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="https://github.com/laithtahatech"
+          target="_blank"
+          class="primary-button"
+        >
+          View on GitHub
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="terms.html">Terms</a>
-            <a
-                href="https://github.com/laithtahatech"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-        </nav>
+        <a
+          href="#features"
+          class="secondary-button"
+        >
+          Explore the Project
+        </a>
+
+      </div>
 
     </div>
-</header>
+
+  </header>
 
 
-<main>
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about" class="about">
 
     <div class="container">
 
-        <div class="page-header">
+      <div class="section-header">
 
-            <div class="badge">
-                KEEPly SOFTWARE PROJECT
-            </div>
-
-            <h1>Privacy Policy</h1>
-
-            <p class="updated">
-                Last updated: August 31, 2026
-            </p>
-
-        </div>
-
-
-        <p class="intro">
-            This Privacy Policy explains how Keeply handles information
-            when you use the Keeply application and its related services.
-        </p>
-
-        <p class="intro">
-            Keeply is an independent, non-commercial software development
-            project designed as a personal security vault for organizing
-            passwords, bookmarks, media, documents, and application backups.
-        </p>
-
-
-        <div class="notice">
-
-            <strong>Privacy principle:</strong>
-
-            Keeply is designed to minimize information sent outside your
-            device and to use third-party services only when required for
-            features that you explicitly choose to use.
-
-        </div>
-
-
-        <!-- 1 -->
-
-        <section>
-
-            <h2>1. Information Stored Locally</h2>
-
-            <p>
-                Depending on the features you use, Keeply may store
-                information locally on your device, including:
-            </p>
-
-            <ul>
-                <li>Password and account information that you choose to save.</li>
-                <li>Bookmarks and bookmark descriptions.</li>
-                <li>Personal media that you choose to store in the vault.</li>
-                <li>Documents and folders that you choose to store.</li>
-                <li>Application settings and related vault information.</li>
-                <li>Backup metadata required to manage backup operations.</li>
-            </ul>
-
-            <p>
-                Local vault data is intended to remain on your device unless
-                you explicitly use a feature that transfers data to a
-                third-party service, such as Google Drive backup.
-            </p>
-
-        </section>
-
-
-        <!-- 2 -->
-
-        <section>
-
-            <h2>2. Google Account and Google Sign-In</h2>
-
-            <p>
-                Keeply may use Google Sign-In to allow you to authenticate
-                with your Google Account when you choose to use
-                Google-related features.
-            </p>
-
-            <p>
-                When you sign in with Google, Google may provide Keeply
-                with basic account information necessary to identify the
-                selected Google Account and complete authentication, such
-                as your Google account identifier, email address, and
-                basic profile information made available through the
-                authorization process.
-            </p>
-
-            <p>
-                Keeply uses this information only to provide authentication
-                and account-related functionality requested by you.
-            </p>
-
-        </section>
-
-
-        <!-- 3 -->
-
-        <section>
-
-            <h2>3. Google Drive Data</h2>
-
-            <div class="google-data">
-
-                <h3>What Google Drive data may Keeply access?</h3>
-
-                <p>
-                    If you enable Google Drive backup, Keeply requests the
-                    Google Drive permission required for its backup feature.
-                    The application is designed to use Google's application
-                    data storage area
-                    (<code>drive.appdata</code>)
-                    for Keeply backup data.
-                </p>
-
-
-                <h3>How is Google Drive data used?</h3>
-
-                <p>
-                    Google Drive data accessed by Keeply is used only to
-                    provide the backup and restore functionality that you
-                    explicitly request.
-                </p>
-
-                <p>
-                    Keeply may create, read, update, or manage its own backup
-                    files in the application's Google Drive storage area in
-                    order to perform backup and restore operations.
-                </p>
-
-
-                <h3>Is Google Drive data sold?</h3>
-
-                <p>
-                    No. Keeply does not sell Google user data.
-                </p>
-
-
-                <h3>Is Google Drive data used for advertising?</h3>
-
-                <p>
-                    No. Google user data accessed through Google APIs is not
-                    used for targeted advertising, personalized advertising,
-                    retargeting, or other advertising purposes.
-                </p>
-
-
-                <h3>Is Google Drive data used for AI or machine learning?</h3>
-
-                <p>
-                    No. Keeply does not use Google user data obtained through
-                    Google APIs to train or improve generalized artificial
-                    intelligence or machine learning models.
-                </p>
-
-
-                <h3>Is Google Drive data shared with third parties?</h3>
-
-                <p>
-                    Keeply does not transfer or disclose Google user data to
-                    third parties except where such transfer is necessary to
-                    provide a user-facing feature that you have explicitly
-                    requested, to protect security, to comply with applicable
-                    law, or where otherwise permitted or required by Google's
-                    applicable policies.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- 4 -->
-
-        <section>
-
-            <h2>4. Purpose of Data Processing</h2>
-
-            <p>
-                Information handled by Keeply is used for purposes such as:
-            </p>
-
-            <ul>
-                <li>Providing and operating the Keeply application.</li>
-                <li>Storing information that you intentionally save in your vault.</li>
-                <li>Authenticating your Google Account when you choose Google Sign-In.</li>
-                <li>Creating and restoring backups that you explicitly request.</li>
-                <li>Maintaining and improving the functionality of the application.</li>
-                <li>Protecting the application and its users against abuse or security issues.</li>
-            </ul>
-
-            <p>
-                Keeply does not use Google user data for purposes unrelated
-                to the user-facing functionality described in this Privacy Policy.
-            </p>
-
-        </section>
-
-
-        <!-- 5 -->
-
-        <section>
-
-            <h2>5. Data Sharing</h2>
-
-            <p>
-                Keeply does not sell your personal information or Google user
-                data to advertisers, data brokers, or information resellers.
-            </p>
-
-            <p>
-                Keeply does not use Google user data to determine credit
-                worthiness, provide lending decisions, or serve advertising.
-            </p>
-
-            <p>
-                Information may be disclosed when reasonably necessary to
-                comply with applicable law, respond to lawful requests, or
-                protect the security and integrity of the application and
-                its users.
-            </p>
-
-        </section>
-
-
-        <!-- 6 -->
-
-        <section>
-
-            <h2>6. Data Storage and Security</h2>
-
-            <p>
-                Keeply is designed with a security-focused architecture.
-                Sensitive vault information is intended to be protected
-                using local security and encryption mechanisms provided
-                by the application.
-            </p>
-
-            <p>
-                Backup data stored through Google Drive is handled through
-                the Google Drive service associated with the Google Account
-                that you authorize.
-            </p>
-
-            <p>
-                No method of electronic storage or transmission can be
-                guaranteed to be completely secure. Users should also
-                protect their devices, authentication credentials, and
-                Google Accounts.
-            </p>
-
-        </section>
-
-
-        <!-- 7 -->
-
-        <section>
-
-            <h2>7. Data Retention</h2>
-
-            <p>
-                Locally stored vault data remains on your device until you
-                delete it, uninstall the application, or otherwise remove
-                it using functionality provided by the application or your
-                device.
-            </p>
-
-            <p>
-                Backup data stored in Google Drive may remain there until
-                you delete the backup or use Keeply's available backup
-                management functionality to remove it.
-            </p>
-
-            <p>
-                Keeply does not intentionally retain Google Drive backup
-                data longer than necessary to provide the backup
-                functionality you request.
-            </p>
-
-        </section>
-
-
-        <!-- 8 -->
-
-        <section>
-
-            <h2>8. Data Deletion</h2>
-
-            <p>
-                You can delete information stored locally through the
-                application's available deletion functionality or by
-                removing the application and its associated local data
-                from your device, where applicable.
-            </p>
-
-            <p>
-                You may also delete Keeply backup data stored in your
-                Google Drive through the application's available backup
-                management functionality or through the Google services
-                associated with your account, where applicable.
-            </p>
-
-            <p>
-                If you need assistance regarding deletion of data
-                associated with Keeply, contact the developer using the
-                contact information provided by the application.
-            </p>
-
-        </section>
-
-
-        <!-- 9 -->
-
-        <section>
-
-            <h2>9. Google API Services</h2>
-
-            <p>
-                Keeply's use and transfer of information received from
-                Google APIs will comply with the
-                <a
-                    href="https://developers.google.com/terms/api-services-user-data-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Google API Services User Data Policy
-                </a>,
-                including the Limited Use requirements where applicable.
-            </p>
-
-            <p>
-                Google services are operated by Google and may be subject
-                to Google's own privacy policies and terms.
-            </p>
-
-        </section>
-
-
-        <!-- 10 -->
-
-        <section>
-
-            <h2>10. Third-Party Services</h2>
-
-            <p>
-                Keeply may integrate with third-party services, including
-                Google Sign-In and Google Drive.
-            </p>
-
-            <p>
-                These services are operated by their respective providers.
-                Their handling of information may also be governed by
-                their own privacy policies and terms.
-            </p>
-
-        </section>
-
-
-        <!-- 11 -->
-
-        <section>
-
-            <h2>11. Children's Privacy</h2>
-
-            <p>
-                Keeply is intended as a personal security and organization
-                application and is not specifically directed toward children.
-            </p>
-
-            <p>
-                We do not knowingly collect personal information from
-                children in violation of applicable law.
-            </p>
-
-        </section>
-
-
-        <!-- 12 -->
-
-        <section>
-
-            <h2>12. Changes to This Privacy Policy</h2>
-
-            <p>
-                This Privacy Policy may be updated when Keeply's
-                functionality or data practices change.
-            </p>
-
-            <p>
-                When changes are made, the updated policy will be published
-                on this page and the "Last updated" date will be changed.
-            </p>
-
-        </section>
-
-
-        <!-- 13 -->
-
-        <section>
-
-            <h2>13. Contact</h2>
-
-            <p>
-                If you have questions about this Privacy Policy or Keeply's
-                data practices, please contact the Keeply developer through
-                the developer contact information provided in the application
-                or its Google OAuth configuration.
-            </p>
-
-        </section>
-
-    </div>
-
-</main>
-
-
-<footer>
-
-    <div class="container">
+        <h2>About Keeply</h2>
 
         <p>
-            © 2026 Keeply — Independent Software Development Project
+          A software project built to explore secure local data
+          management and cloud backup technologies.
         </p>
 
-        <div class="footer-links">
+      </div>
 
-            <a href="index.html">
-                Home
-            </a>
 
-            <a href="terms.html">
-                Terms of Service
-            </a>
+      <div class="about-box">
 
-            <a
-                href="https://github.com/laithtahatech"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
+        <div>
+
+          <h3>What is Keeply?</h3>
+
+          <p>
+            Keeply is an offline-first personal vault application.
+            It is designed to provide one place where users can
+            organize different types of personal information instead
+            of keeping them scattered across multiple applications
+            and locations.
+          </p>
+
+          <span class="project-type">
+            Personal Software Development Project
+          </span>
 
         </div>
 
+
+        <div>
+
+          <h3>Why was it built?</h3>
+
+          <p>
+            The project was created as a practical software development
+            project to learn and implement concepts such as application
+            architecture, local storage, encryption, authentication,
+            file management, and Google Drive integration.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-</footer>
+  </section>
+
+
+  <!-- =========================
+       FEATURES
+  ========================== -->
+
+  <section id="features" class="features">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+          The main software modules currently planned for Keeply.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            01
+          </div>
+
+          <h3>Password Vault</h3>
+
+          <p>
+            Organize account credentials, usernames, emails,
+            and passwords in one personal vault.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            02
+          </div>
+
+          <h3>Bookmarks</h3>
+
+          <p>
+            Save important websites and links together with
+            descriptions and quick access.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            03
+          </div>
+
+          <h3>Media Vault</h3>
+
+          <p>
+            Organize personal images and media files locally
+            inside the application.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            04
+          </div>
+
+          <h3>Documents</h3>
+
+          <p>
+            Store personal documents and organize files and
+            folders within the vault.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            05
+          </div>
+
+          <h3>Local Security</h3>
+
+          <p>
+            The application focuses on local data protection,
+            authentication, and encrypted storage.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            06
+          </div>
+
+          <h3>Google Drive Backup</h3>
+
+          <p>
+            Planned cloud backup functionality using the user's
+            own Google Drive account.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       TECHNOLOGY
+  ========================== -->
+
+  <section id="technology" class="technology">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>Technology</h2>
+
+        <p>
+          Technologies and concepts used while developing Keeply.
+        </p>
+
+      </div>
+
+
+      <div class="tech-list">
+
+        <span class="tech">Flutter</span>
+        <span class="tech">Dart</span>
+        <span class="tech">Clean Architecture</span>
+        <span class="tech">Flutter BLoC</span>
+        <span class="tech">Hive</span>
+        <span class="tech">Local Storage</span>
+        <span class="tech">Encryption</span>
+        <span class="tech">Secure Storage</span>
+        <span class="tech">Google APIs</span>
+        <span class="tech">Google Drive</span>
+        <span class="tech">OAuth 2.0</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DEVELOPMENT
+  ========================== -->
+
+  <section class="development">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>Development</h2>
+
+        <p>
+          Keeply is actively developed as a software engineering
+          and learning project.
+        </p>
+
+      </div>
+
+
+      <div class="development-box">
+
+        <h3>Built with a software-first approach</h3>
+
+        <p>
+          The project focuses on implementing real-world application
+          development concepts rather than being a simple static website.
+        </p>
+
+        <p>
+          Development includes application architecture, state
+          management, local persistence, authentication, encryption,
+          file handling, backup and restore workflows, and integration
+          with external APIs.
+        </p>
+
+        <p>
+          Keeply is a non-commercial personal project and is not intended
+          to generate revenue or profit.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECT LINKS
+  ========================== -->
+
+  <section class="links">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>Project Resources</h2>
+
+        <p>
+          Learn more about the project and its policies.
+        </p>
+
+      </div>
+
+
+      <div class="links-grid">
+
+        <a
+          href="https://github.com/laithtahatech"
+          target="_blank"
+          class="link-card"
+        >
+          <strong>GitHub</strong>
+          <span>Source code and development</span>
+        </a>
+
+
+        <a
+          href="privacy.html"
+          class="link-card"
+        >
+          <strong>Privacy Policy</strong>
+          <span>How Keeply handles user data</span>
+        </a>
+
+
+        <a
+          href="terms.html"
+          class="link-card"
+        >
+          <strong>Terms of Service</strong>
+          <span>Terms and conditions</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        Keeply
+      </div>
+
+      <div class="footer-text">
+        © 2026 Keeply. Personal software development project.
+      </div>
+
+      <div class="footer-links">
+
+        <a href="privacy.html">
+          Privacy
+        </a>
+
+        <a href="terms.html">
+          Terms
+        </a>
+
+        <a
+          href="https://github.com/laithtahatech"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
