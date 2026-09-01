@@ -4,107 +4,296 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Terms of Service - Keeply</title>
+    <title>Terms of Service — Keeply</title>
 
     <meta
         name="description"
-        content="Terms of Service for Keeply."
+        content="Terms of Service for Keeply, an independent software development project."
     >
+
+    <meta name="theme-color" content="#1877F2">
 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #071a16;
-            color: #f5f7f6;
-            line-height: 1.8;
-        }
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
 
-        .container {
-            width: min(100% - 40px, 900px);
-            margin: auto;
-        }
-
-        header {
-            padding: 28px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 700;
-            color: #42d6a4;
-            text-decoration: none;
-        }
-
-        nav a {
-            color: #dce7e3;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        nav a:hover {
-            color: #42d6a4;
-        }
-
-        main {
-            padding: 70px 0;
-        }
-
-        h1 {
-            font-size: 46px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #42d6a4;
-            margin-top: 45px;
-        }
-
-        p,
-        li {
-            color: #b8c8c3;
-        }
-
-        .updated {
-            color: #8fa19b;
-            margin-bottom: 45px;
-        }
-
-        .notice {
-            padding: 20px;
-            border: 1px solid rgba(66,214,164,0.25);
-            border-radius: 12px;
-            background: rgba(66,214,164,0.05);
-            margin: 30px 0;
+            background: #ffffff;
+            color: #1c1e21;
+            line-height: 1.75;
         }
 
         a {
-            color: #42d6a4;
+            color: #1877F2;
+            text-decoration: none;
         }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e4e6eb;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            min-height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #1877F2;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand:hover {
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #1877F2;
+            color: #ffffff;
+
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: #65676b;
+        }
+
+        nav a:hover {
+            color: #1877F2;
+            text-decoration: none;
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main {
+            padding: 80px 0 100px;
+        }
+
+        .page-header {
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            margin-bottom: 18px;
+            padding: 7px 13px;
+
+            border: 1px solid #d8e8ff;
+            border-radius: 999px;
+
+            background: #eaf3ff;
+            color: #1877F2;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+
+            font-size: clamp(38px, 6vw, 56px);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+
+            color: #1c1e21;
+        }
+
+        .updated {
+            color: #65676b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .intro {
+            margin-bottom: 35px;
+
+            color: #4b4f52;
+            font-size: 17px;
+        }
+
+        section {
+            margin-top: 48px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+
+            color: #1877F2;
+
+            font-size: 27px;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 16px;
+
+            color: #4b4f52;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 12px 0 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 9px;
+            color: #4b4f52;
+        }
+
+        .notice {
+            margin: 30px 0;
+            padding: 22px 24px;
+
+            border: 1px solid #d8e8ff;
+            border-left: 4px solid #1877F2;
+            border-radius: 10px;
+
+            background: #f7faff;
+
+            color: #4b4f52;
+        }
+
+        .notice strong {
+            color: #1877F2;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            padding: 30px 0;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 35px 0;
+
+            border-top: 1px solid #e4e6eb;
+
+            background: #ffffff;
+
             text-align: center;
-            color: #8fa19b;
         }
 
-        footer a {
-            color: #42d6a4;
-            text-decoration: none;
-            margin: 0 8px;
+        footer p {
+            margin-bottom: 10px;
+
+            color: #65676b;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #65676b;
+        }
+
+        .footer-links a:hover {
+            color: #1877F2;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(100% - 30px, 900px);
+            }
+
+            .header-inner {
+                min-height: 64px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a:nth-child(2) {
+                display: none;
+            }
+
+            main {
+                padding: 60px 0 75px;
+            }
+
+            section {
+                margin-top: 40px;
+            }
         }
     </style>
 </head>
@@ -112,188 +301,414 @@
 <body>
 
 <header>
-    <div class="container nav">
-        <a class="logo" href="index.html">Keeply</a>
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-icon">K</span>
+            Keeply
+        </a>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy</a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a
+                href="https://github.com/laithtahatech"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
         </nav>
+
     </div>
+
 </header>
 
+
 <main>
+
     <div class="container">
 
-        <h1>Terms of Service</h1>
+        <div class="page-header">
 
-        <p class="updated">
-            Last updated: August 31, 2026
-        </p>
+            <div class="badge">
+                KEEPly SOFTWARE PROJECT
+            </div>
 
-        <p>
+            <h1>
+                Terms of Service
+            </h1>
+
+            <p class="updated">
+                Last updated: August 31, 2026
+            </p>
+
+        </div>
+
+
+        <p class="intro">
             Welcome to Keeply. By using the Keeply application or related
             services, you agree to these Terms of Service. If you do not
             agree with these terms, please do not use the application.
         </p>
 
-        <h2>1. About Keeply</h2>
-
-        <p>
-            Keeply is a personal security and organization application
-            designed to help users manage passwords, bookmarks, personal
-            media, documents, and application backups.
-        </p>
-
-        <h2>2. Your Data</h2>
-
-        <p>
-            You are responsible for the information and files that you
-            choose to store in Keeply. You should maintain appropriate
-            backups of important information and ensure that you have the
-            necessary rights to the content you store.
-        </p>
-
-        <h2>3. Google Account and Google Drive</h2>
-
-        <p>
-            Keeply may allow you to connect your Google Account to use
-            Google Drive for application backup and restoration features.
-        </p>
-
-        <p>
-            When you choose to connect Google Drive, you authorize Keeply
-            to access the Google Drive data permitted by the Google
-            authorization screen and the permissions requested by the
-            application.
-        </p>
-
-        <p>
-            Your use of Google services is also subject to Google's own
-            terms and policies.
-        </p>
-
-        <h2>4. Account and Device Security</h2>
-
-        <p>
-            You are responsible for protecting access to your device,
-            Keeply PIN or authentication methods, and connected accounts.
-        </p>
-
-        <p>
-            Do not share your Keeply authentication credentials with other
-            people.
-        </p>
-
-        <h2>5. Acceptable Use</h2>
-
-        <p>
-            You agree to use Keeply only for lawful purposes and in a way
-            that does not violate the rights of other people or applicable
-            laws.
-        </p>
-
-        <p>You must not:</p>
-
-        <ul>
-            <li>
-                Use Keeply to store or distribute unlawful content.
-            </li>
-            <li>
-                Attempt to interfere with or disrupt the application or
-                related services.
-            </li>
-            <li>
-                Attempt to gain unauthorized access to systems, accounts,
-                or data belonging to others.
-            </li>
-            <li>
-                Abuse Google services through the Keeply application.
-            </li>
-        </ul>
-
-        <h2>6. Availability</h2>
-
-        <p>
-            Keeply is provided on an as-available basis. Features may be
-            changed, updated, temporarily unavailable, or discontinued in
-            the future.
-        </p>
-
-        <h2>7. Backups</h2>
-
-        <p>
-            Backup functionality is provided as a convenience and should
-            not be considered a guarantee that your data will always be
-            recoverable.
-        </p>
 
         <div class="notice">
+
             <strong>Important:</strong>
-            Always keep additional copies of information that is important
-            to you. Keeply should not be your only copy of critical data.
+
+            Keeply is an independent, non-commercial software development
+            project. The application is provided as a personal software
+            project and is not intended to provide professional security,
+            legal, financial, or other professional services.
+
         </div>
 
-        <h2>8. Third-Party Services</h2>
 
-        <p>
-            Keeply may integrate with third-party services such as Google
-            Sign-In and Google Drive. Third-party services are operated by
-            their respective providers and may have their own terms,
-            policies, availability, and requirements.
-        </p>
+        <!-- 1 -->
 
-        <h2>9. Intellectual Property</h2>
+        <section>
 
-        <p>
-            Keeply and its associated branding, software, design, and
-            original content may be protected by applicable intellectual
-            property laws. You may not copy, modify, distribute, or
-            reproduce protected parts of the application except as
-            permitted by applicable law or the applicable license.
-        </p>
+            <h2>1. About Keeply</h2>
 
-        <h2>10. Disclaimer</h2>
+            <p>
+                Keeply is a personal security and organization application
+                designed to help users manage passwords, bookmarks, personal
+                media, documents, and application backups.
+            </p>
 
-        <p>
-            Keeply is intended as a personal data organization and storage
-            tool. It is not a substitute for professional cybersecurity,
-            legal, financial, or other professional services.
-        </p>
+            <p>
+                Keeply is developed as an independent software development
+                project focused on exploring application architecture,
+                local storage, encryption, authentication, file management,
+                backup systems, and integration with external APIs.
+            </p>
 
-        <p>
-            You use the application at your own risk and are responsible
-            for maintaining appropriate security practices and backups.
-        </p>
+        </section>
 
-        <h2>11. Changes to These Terms</h2>
 
-        <p>
-            These Terms of Service may be updated from time to time.
-            Changes will be published on this page with an updated
-            revision date.
-        </p>
+        <!-- 2 -->
 
-        <h2>12. Contact</h2>
+        <section>
 
-        <p>
-            If you have questions about these Terms of Service, you can
-            contact the Keeply developer through the contact information
-            provided on the application's official website.
-        </p>
+            <h2>2. Your Data</h2>
+
+            <p>
+                You are responsible for the information and files that you
+                choose to store in Keeply.
+            </p>
+
+            <p>
+                You should maintain appropriate backups of important
+                information and ensure that you have the necessary rights
+                to the content you store in the application.
+            </p>
+
+            <p>
+                You are responsible for ensuring that your use of Keeply
+                complies with applicable laws and regulations.
+            </p>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section>
+
+            <h2>3. Google Account and Google Drive</h2>
+
+            <p>
+                Keeply may allow you to connect your Google Account to use
+                Google Drive for application backup and restoration features.
+            </p>
+
+            <p>
+                When you choose to connect Google Drive, you authorize Keeply
+                to access the Google Drive data permitted by the Google
+                authorization screen and the permissions requested by the
+                application.
+            </p>
+
+            <p>
+                Keeply is designed to use Google's application data storage
+                area for its application backup functionality where applicable.
+            </p>
+
+            <p>
+                Your use of Google services is also subject to Google's own
+                terms, policies, and requirements.
+            </p>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section>
+
+            <h2>4. Account and Device Security</h2>
+
+            <p>
+                You are responsible for protecting access to your device,
+                Keeply PIN or authentication methods, and connected accounts.
+            </p>
+
+            <p>
+                Do not share your Keeply authentication credentials with
+                other people.
+            </p>
+
+            <p>
+                You should use appropriate security practices to protect
+                your device and the accounts connected to Keeply.
+            </p>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section>
+
+            <h2>5. Acceptable Use</h2>
+
+            <p>
+                You agree to use Keeply only for lawful purposes and in a
+                way that does not violate the rights of other people or
+                applicable laws.
+            </p>
+
+            <p>
+                You must not:
+            </p>
+
+            <ul>
+
+                <li>
+                    Use Keeply to store or distribute unlawful content.
+                </li>
+
+                <li>
+                    Attempt to interfere with or disrupt the application
+                    or related services.
+                </li>
+
+                <li>
+                    Attempt to gain unauthorized access to systems,
+                    accounts, or data belonging to others.
+                </li>
+
+                <li>
+                    Abuse Google services through the Keeply application.
+                </li>
+
+                <li>
+                    Use Keeply to facilitate activities that violate
+                    applicable laws or the rights of others.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 6 -->
+
+        <section>
+
+            <h2>6. Availability</h2>
+
+            <p>
+                Keeply is provided on an as-available basis. Features may be
+                changed, updated, temporarily unavailable, or discontinued
+                in the future.
+            </p>
+
+            <p>
+                Because Keeply is an independently developed software
+                project, there may be bugs, errors, compatibility issues,
+                or interruptions.
+            </p>
+
+        </section>
+
+
+        <!-- 7 -->
+
+        <section>
+
+            <h2>7. Backups</h2>
+
+            <p>
+                Backup functionality is provided as a convenience and should
+                not be considered a guarantee that your data will always be
+                recoverable.
+            </p>
+
+            <div class="notice">
+
+                <strong>Important:</strong>
+
+                Always keep additional copies of information that is important
+                to you. Keeply should not be your only copy of critical data.
+
+            </div>
+
+            <p>
+                You are responsible for verifying that backups are completed
+                successfully and for maintaining additional copies of
+                important information when necessary.
+            </p>
+
+        </section>
+
+
+        <!-- 8 -->
+
+        <section>
+
+            <h2>8. Third-Party Services</h2>
+
+            <p>
+                Keeply may integrate with third-party services such as
+                Google Sign-In and Google Drive.
+            </p>
+
+            <p>
+                Third-party services are operated by their respective
+                providers and may have their own terms, policies,
+                availability, and requirements.
+            </p>
+
+            <p>
+                Keeply is not responsible for changes, outages, or
+                limitations imposed by third-party service providers.
+            </p>
+
+        </section>
+
+
+        <!-- 9 -->
+
+        <section>
+
+            <h2>9. Intellectual Property</h2>
+
+            <p>
+                Keeply and its associated branding, software, design, and
+                original content may be protected by applicable intellectual
+                property laws.
+            </p>
+
+            <p>
+                You may not copy, modify, distribute, or reproduce protected
+                parts of the application except as permitted by applicable
+                law or the applicable license.
+            </p>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section>
+
+            <h2>10. Disclaimer</h2>
+
+            <p>
+                Keeply is intended as a personal data organization and
+                storage tool.
+            </p>
+
+            <p>
+                It is not a substitute for professional cybersecurity,
+                legal, financial, medical, or other professional services.
+            </p>
+
+            <p>
+                You use the application at your own risk and are responsible
+                for maintaining appropriate security practices and backups.
+            </p>
+
+        </section>
+
+
+        <!-- 11 -->
+
+        <section>
+
+            <h2>11. Changes to These Terms</h2>
+
+            <p>
+                These Terms of Service may be updated from time to time.
+                Changes will be published on this page with an updated
+                revision date.
+            </p>
+
+            <p>
+                Continued use of Keeply after changes are published means
+                that you accept the updated Terms of Service to the extent
+                permitted by applicable law.
+            </p>
+
+        </section>
+
+
+        <!-- 12 -->
+
+        <section>
+
+            <h2>12. Contact</h2>
+
+            <p>
+                If you have questions about these Terms of Service, you can
+                contact the Keeply developer through the contact information
+                provided on the application's official website.
+            </p>
+
+        </section>
 
     </div>
+
 </main>
 
-<footer>
-    <div class="container">
-        <div>© 2026 Keeply</div>
 
-        <div>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy Policy</a>
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Keeply — Independent Software Development Project
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a
+                href="https://github.com/laithtahatech"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
         </div>
+
     </div>
+
 </footer>
 
 </body>
