@@ -4,124 +4,331 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Privacy Policy - Keeply</title>
+    <title>Privacy Policy — Keeply</title>
 
     <meta
         name="description"
-        content="Privacy Policy for Keeply, a personal security vault application."
+        content="Privacy Policy for Keeply, an independent software development project."
     >
+
+    <meta name="theme-color" content="#1877F2">
 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #071a16;
-            color: #f5f7f6;
-            line-height: 1.8;
-        }
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
 
-        .container {
-            width: min(100% - 40px, 900px);
-            margin: auto;
-        }
-
-        header {
-            padding: 28px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 700;
-            color: #42d6a4;
-            text-decoration: none;
-        }
-
-        nav a {
-            color: #dce7e3;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        nav a:hover {
-            color: #42d6a4;
-        }
-
-        main {
-            padding: 70px 0;
-        }
-
-        h1 {
-            font-size: 46px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #42d6a4;
-            margin-top: 45px;
-        }
-
-        h3 {
-            color: #dce7e3;
-            margin-top: 30px;
-        }
-
-        p,
-        li {
-            color: #b8c8c3;
-        }
-
-        .updated {
-            color: #8fa19b;
-            margin-bottom: 45px;
-        }
-
-        .notice {
-            padding: 20px;
-            border: 1px solid rgba(66,214,164,0.25);
-            border-radius: 12px;
-            background: rgba(66,214,164,0.05);
-            margin: 30px 0;
-        }
-
-        .google-data {
-            padding: 24px;
-            border: 1px solid rgba(66,214,164,0.3);
-            border-radius: 14px;
-            background: rgba(66,214,164,0.04);
-            margin: 30px 0;
+            background: #ffffff;
+            color: #1c1e21;
+            line-height: 1.75;
         }
 
         a {
-            color: #42d6a4;
-        }
-
-        footer {
-            padding: 30px 0;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            text-align: center;
-            color: #8fa19b;
-        }
-
-        footer a {
-            color: #42d6a4;
+            color: #1877F2;
             text-decoration: none;
-            margin: 0 8px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e4e6eb;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            min-height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #1877F2;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand:hover {
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #1877F2;
+            color: #ffffff;
+
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: #65676b;
+        }
+
+        nav a:hover {
+            color: #1877F2;
+            text-decoration: none;
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main {
+            padding: 80px 0 100px;
+        }
+
+        .page-header {
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            margin-bottom: 18px;
+            padding: 7px 13px;
+
+            border: 1px solid #d8e8ff;
+            border-radius: 999px;
+
+            background: #eaf3ff;
+            color: #1877F2;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+
+            font-size: clamp(38px, 6vw, 56px);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+
+            color: #1c1e21;
+        }
+
+        .updated {
+            color: #65676b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .intro {
+            margin-bottom: 35px;
+
+            color: #4b4f52;
+            font-size: 17px;
+        }
+
+        .notice {
+            margin: 30px 0;
+            padding: 22px 24px;
+
+            border: 1px solid #d8e8ff;
+            border-left: 4px solid #1877F2;
+            border-radius: 10px;
+
+            background: #f7faff;
+        }
+
+        .notice strong {
+            color: #1877F2;
+        }
+
+        section {
+            margin-top: 48px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+
+            color: #1877F2;
+
+            font-size: 27px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 10px;
+
+            color: #1c1e21;
+            font-size: 19px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #4b4f52;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 12px 0 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 9px;
+            color: #4b4f52;
         }
 
         code {
-            color: #42d6a4;
+            padding: 2px 6px;
+
+            border-radius: 5px;
+
+            background: #f0f2f5;
+            color: #1877F2;
+
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+        }
+
+        .google-data {
+            margin: 30px 0;
+            padding: 28px;
+
+            border: 1px solid #d8e8ff;
+            border-radius: 12px;
+
+            background: #f7faff;
+        }
+
+        .google-data h3 {
+            color: #1877F2;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 35px 0;
+
+            border-top: 1px solid #e4e6eb;
+
+            background: #ffffff;
+
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+
+            color: #65676b;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #65676b;
+        }
+
+        .footer-links a:hover {
+            color: #1877F2;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(100% - 30px, 900px);
+            }
+
+            .header-inner {
+                min-height: 64px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a:nth-child(2) {
+                display: none;
+            }
+
+            main {
+                padding: 60px 0 75px;
+            }
+
+            section {
+                margin-top: 40px;
+            }
+
+            .google-data {
+                padding: 22px;
+            }
         }
     </style>
 </head>
@@ -129,351 +336,479 @@
 <body>
 
 <header>
-    <div class="container nav">
+    <div class="container header-inner">
 
-        <a class="logo" href="index.html">
+        <a href="index.html" class="brand">
+            <span class="brand-icon">K</span>
             Keeply
         </a>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="terms.html">Terms</a>
+            <a
+                href="https://github.com/laithtahatech"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
         </nav>
 
     </div>
 </header>
 
+
 <main>
+
     <div class="container">
 
-        <h1>Privacy Policy</h1>
+        <div class="page-header">
 
-        <p class="updated">
-            Last updated: August 31, 2026
-        </p>
+            <div class="badge">
+                KEEPly SOFTWARE PROJECT
+            </div>
 
-        <p>
+            <h1>Privacy Policy</h1>
+
+            <p class="updated">
+                Last updated: August 31, 2026
+            </p>
+
+        </div>
+
+
+        <p class="intro">
             This Privacy Policy explains how Keeply handles information
             when you use the Keeply application and its related services.
         </p>
 
-        <p>
-            Keeply is designed as a personal security vault for organizing
-            passwords, bookmarks, media, documents, and application
-            backups.
+        <p class="intro">
+            Keeply is an independent, non-commercial software development
+            project designed as a personal security vault for organizing
+            passwords, bookmarks, media, documents, and application backups.
         </p>
+
 
         <div class="notice">
+
             <strong>Privacy principle:</strong>
-            Keeply is designed to minimize the information that is sent
-            outside your device and to use third-party services only when
-            required for features that you explicitly choose to use.
-        </div>
 
-
-        <h2>1. Information Stored Locally</h2>
-
-        <p>
-            Depending on the features you use, Keeply may store information
-            locally on your device, including:
-        </p>
-
-        <ul>
-            <li>Password and account information that you choose to save.</li>
-            <li>Bookmarks and bookmark descriptions.</li>
-            <li>Personal media that you choose to store in the vault.</li>
-            <li>Documents and folders that you choose to store.</li>
-            <li>Application settings and related vault information.</li>
-            <li>Backup metadata required to manage backup operations.</li>
-        </ul>
-
-        <p>
-            Local vault data is intended to remain on your device unless
-            you explicitly use a feature that transfers data to a
-            third-party service, such as Google Drive backup.
-        </p>
-
-
-        <h2>2. Google Account and Google Sign-In</h2>
-
-        <p>
-            Keeply may use Google Sign-In to allow you to authenticate with
-            your Google Account when you choose to use Google-related
-            features.
-        </p>
-
-        <p>
-            When you sign in with Google, Google may provide Keeply with
-            basic account information necessary to identify the selected
-            Google Account and complete authentication, such as your
-            Google account identifier, email address, and basic profile
-            information made available through the authorization process.
-        </p>
-
-        <p>
-            Keeply uses this information only to provide authentication and
-            account-related functionality requested by you.
-        </p>
-
-
-        <h2>3. Google Drive Data</h2>
-
-        <div class="google-data">
-
-            <h3>What Google Drive data may Keeply access?</h3>
-
-            <p>
-                If you enable Google Drive backup, Keeply requests the
-                Google Drive permission required for its backup feature.
-                The application is designed to use Google's application
-                data storage area (<code>drive.appdata</code>) for Keeply
-                backup data.
-            </p>
-
-            <h3>How is Google Drive data used?</h3>
-
-            <p>
-                Google Drive data accessed by Keeply is used only to provide
-                the backup and restore functionality that you explicitly
-                request.
-            </p>
-
-            <p>
-                Keeply may create, read, update, or manage its own backup
-                files in the application's Google Drive storage area in
-                order to perform backup and restore operations.
-            </p>
-
-            <h3>Is Google Drive data sold?</h3>
-
-            <p>
-                No. Keeply does not sell Google user data.
-            </p>
-
-            <h3>Is Google Drive data used for advertising?</h3>
-
-            <p>
-                No. Google user data accessed through Google APIs is not
-                used for targeted advertising, personalized advertising,
-                retargeting, or other advertising purposes.
-            </p>
-
-            <h3>Is Google Drive data used for AI or machine learning?</h3>
-
-            <p>
-                No. Keeply does not use Google user data obtained through
-                Google APIs to train or improve generalized artificial
-                intelligence or machine learning models.
-            </p>
-
-            <h3>Is Google Drive data shared with third parties?</h3>
-
-            <p>
-                Keeply does not transfer or disclose Google user data to
-                third parties except where such transfer is necessary to
-                provide a user-facing feature that you have explicitly
-                requested, to protect security, to comply with applicable
-                law, or where otherwise permitted or required by Google's
-                applicable policies.
-            </p>
+            Keeply is designed to minimize information sent outside your
+            device and to use third-party services only when required for
+            features that you explicitly choose to use.
 
         </div>
 
 
-        <h2>4. Purpose of Data Processing</h2>
+        <!-- 1 -->
+
+        <section>
+
+            <h2>1. Information Stored Locally</h2>
+
+            <p>
+                Depending on the features you use, Keeply may store
+                information locally on your device, including:
+            </p>
+
+            <ul>
+                <li>Password and account information that you choose to save.</li>
+                <li>Bookmarks and bookmark descriptions.</li>
+                <li>Personal media that you choose to store in the vault.</li>
+                <li>Documents and folders that you choose to store.</li>
+                <li>Application settings and related vault information.</li>
+                <li>Backup metadata required to manage backup operations.</li>
+            </ul>
+
+            <p>
+                Local vault data is intended to remain on your device unless
+                you explicitly use a feature that transfers data to a
+                third-party service, such as Google Drive backup.
+            </p>
+
+        </section>
+
+
+        <!-- 2 -->
+
+        <section>
+
+            <h2>2. Google Account and Google Sign-In</h2>
+
+            <p>
+                Keeply may use Google Sign-In to allow you to authenticate
+                with your Google Account when you choose to use
+                Google-related features.
+            </p>
+
+            <p>
+                When you sign in with Google, Google may provide Keeply
+                with basic account information necessary to identify the
+                selected Google Account and complete authentication, such
+                as your Google account identifier, email address, and
+                basic profile information made available through the
+                authorization process.
+            </p>
+
+            <p>
+                Keeply uses this information only to provide authentication
+                and account-related functionality requested by you.
+            </p>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section>
+
+            <h2>3. Google Drive Data</h2>
+
+            <div class="google-data">
+
+                <h3>What Google Drive data may Keeply access?</h3>
+
+                <p>
+                    If you enable Google Drive backup, Keeply requests the
+                    Google Drive permission required for its backup feature.
+                    The application is designed to use Google's application
+                    data storage area
+                    (<code>drive.appdata</code>)
+                    for Keeply backup data.
+                </p>
+
+
+                <h3>How is Google Drive data used?</h3>
+
+                <p>
+                    Google Drive data accessed by Keeply is used only to
+                    provide the backup and restore functionality that you
+                    explicitly request.
+                </p>
+
+                <p>
+                    Keeply may create, read, update, or manage its own backup
+                    files in the application's Google Drive storage area in
+                    order to perform backup and restore operations.
+                </p>
+
+
+                <h3>Is Google Drive data sold?</h3>
+
+                <p>
+                    No. Keeply does not sell Google user data.
+                </p>
+
+
+                <h3>Is Google Drive data used for advertising?</h3>
+
+                <p>
+                    No. Google user data accessed through Google APIs is not
+                    used for targeted advertising, personalized advertising,
+                    retargeting, or other advertising purposes.
+                </p>
+
+
+                <h3>Is Google Drive data used for AI or machine learning?</h3>
+
+                <p>
+                    No. Keeply does not use Google user data obtained through
+                    Google APIs to train or improve generalized artificial
+                    intelligence or machine learning models.
+                </p>
+
+
+                <h3>Is Google Drive data shared with third parties?</h3>
+
+                <p>
+                    Keeply does not transfer or disclose Google user data to
+                    third parties except where such transfer is necessary to
+                    provide a user-facing feature that you have explicitly
+                    requested, to protect security, to comply with applicable
+                    law, or where otherwise permitted or required by Google's
+                    applicable policies.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section>
+
+            <h2>4. Purpose of Data Processing</h2>
+
+            <p>
+                Information handled by Keeply is used for purposes such as:
+            </p>
+
+            <ul>
+                <li>Providing and operating the Keeply application.</li>
+                <li>Storing information that you intentionally save in your vault.</li>
+                <li>Authenticating your Google Account when you choose Google Sign-In.</li>
+                <li>Creating and restoring backups that you explicitly request.</li>
+                <li>Maintaining and improving the functionality of the application.</li>
+                <li>Protecting the application and its users against abuse or security issues.</li>
+            </ul>
+
+            <p>
+                Keeply does not use Google user data for purposes unrelated
+                to the user-facing functionality described in this Privacy Policy.
+            </p>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section>
+
+            <h2>5. Data Sharing</h2>
+
+            <p>
+                Keeply does not sell your personal information or Google user
+                data to advertisers, data brokers, or information resellers.
+            </p>
+
+            <p>
+                Keeply does not use Google user data to determine credit
+                worthiness, provide lending decisions, or serve advertising.
+            </p>
+
+            <p>
+                Information may be disclosed when reasonably necessary to
+                comply with applicable law, respond to lawful requests, or
+                protect the security and integrity of the application and
+                its users.
+            </p>
+
+        </section>
+
+
+        <!-- 6 -->
+
+        <section>
+
+            <h2>6. Data Storage and Security</h2>
+
+            <p>
+                Keeply is designed with a security-focused architecture.
+                Sensitive vault information is intended to be protected
+                using local security and encryption mechanisms provided
+                by the application.
+            </p>
+
+            <p>
+                Backup data stored through Google Drive is handled through
+                the Google Drive service associated with the Google Account
+                that you authorize.
+            </p>
+
+            <p>
+                No method of electronic storage or transmission can be
+                guaranteed to be completely secure. Users should also
+                protect their devices, authentication credentials, and
+                Google Accounts.
+            </p>
+
+        </section>
+
+
+        <!-- 7 -->
+
+        <section>
+
+            <h2>7. Data Retention</h2>
+
+            <p>
+                Locally stored vault data remains on your device until you
+                delete it, uninstall the application, or otherwise remove
+                it using functionality provided by the application or your
+                device.
+            </p>
+
+            <p>
+                Backup data stored in Google Drive may remain there until
+                you delete the backup or use Keeply's available backup
+                management functionality to remove it.
+            </p>
+
+            <p>
+                Keeply does not intentionally retain Google Drive backup
+                data longer than necessary to provide the backup
+                functionality you request.
+            </p>
+
+        </section>
+
+
+        <!-- 8 -->
+
+        <section>
+
+            <h2>8. Data Deletion</h2>
+
+            <p>
+                You can delete information stored locally through the
+                application's available deletion functionality or by
+                removing the application and its associated local data
+                from your device, where applicable.
+            </p>
+
+            <p>
+                You may also delete Keeply backup data stored in your
+                Google Drive through the application's available backup
+                management functionality or through the Google services
+                associated with your account, where applicable.
+            </p>
+
+            <p>
+                If you need assistance regarding deletion of data
+                associated with Keeply, contact the developer using the
+                contact information provided by the application.
+            </p>
+
+        </section>
+
+
+        <!-- 9 -->
+
+        <section>
+
+            <h2>9. Google API Services</h2>
+
+            <p>
+                Keeply's use and transfer of information received from
+                Google APIs will comply with the
+                <a
+                    href="https://developers.google.com/terms/api-services-user-data-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google API Services User Data Policy
+                </a>,
+                including the Limited Use requirements where applicable.
+            </p>
+
+            <p>
+                Google services are operated by Google and may be subject
+                to Google's own privacy policies and terms.
+            </p>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section>
+
+            <h2>10. Third-Party Services</h2>
+
+            <p>
+                Keeply may integrate with third-party services, including
+                Google Sign-In and Google Drive.
+            </p>
+
+            <p>
+                These services are operated by their respective providers.
+                Their handling of information may also be governed by
+                their own privacy policies and terms.
+            </p>
+
+        </section>
+
+
+        <!-- 11 -->
+
+        <section>
+
+            <h2>11. Children's Privacy</h2>
+
+            <p>
+                Keeply is intended as a personal security and organization
+                application and is not specifically directed toward children.
+            </p>
+
+            <p>
+                We do not knowingly collect personal information from
+                children in violation of applicable law.
+            </p>
+
+        </section>
+
+
+        <!-- 12 -->
+
+        <section>
+
+            <h2>12. Changes to This Privacy Policy</h2>
+
+            <p>
+                This Privacy Policy may be updated when Keeply's
+                functionality or data practices change.
+            </p>
+
+            <p>
+                When changes are made, the updated policy will be published
+                on this page and the "Last updated" date will be changed.
+            </p>
+
+        </section>
+
+
+        <!-- 13 -->
+
+        <section>
+
+            <h2>13. Contact</h2>
+
+            <p>
+                If you have questions about this Privacy Policy or Keeply's
+                data practices, please contact the Keeply developer through
+                the developer contact information provided in the application
+                or its Google OAuth configuration.
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
 
         <p>
-            Information handled by Keeply is used for purposes such as:
+            © 2026 Keeply — Independent Software Development Project
         </p>
 
-        <ul>
-            <li>Providing and operating the Keeply application.</li>
-            <li>Storing information that you intentionally save in your vault.</li>
-            <li>Authenticating your Google Account when you choose Google Sign-In.</li>
-            <li>Creating and restoring backups that you explicitly request.</li>
-            <li>Maintaining and improving the functionality of the application.</li>
-            <li>Protecting the application and its users against abuse or security issues.</li>
-        </ul>
+        <div class="footer-links">
 
-        <p>
-            Keeply does not use Google user data for purposes unrelated to
-            the user-facing functionality described in this Privacy Policy.
-        </p>
+            <a href="index.html">
+                Home
+            </a>
 
+            <a href="terms.html">
+                Terms of Service
+            </a>
 
-        <h2>5. Data Sharing</h2>
-
-        <p>
-            Keeply does not sell your personal information or Google user
-            data to advertisers, data brokers, or information resellers.
-        </p>
-
-        <p>
-            Keeply does not use Google user data to determine credit
-            worthiness, provide lending decisions, or serve advertising.
-        </p>
-
-        <p>
-            Information may be disclosed when reasonably necessary to
-            comply with applicable law, respond to lawful requests, or
-            protect the security and integrity of the application and its
-            users.
-        </p>
-
-
-        <h2>6. Data Storage and Security</h2>
-
-        <p>
-            Keeply is designed with a security-focused architecture.
-            Sensitive vault information is intended to be protected using
-            local security and encryption mechanisms provided by the
-            application.
-        </p>
-
-        <p>
-            Backup data stored through Google Drive is handled through the
-            Google Drive service associated with the Google Account that
-            you authorize.
-        </p>
-
-        <p>
-            No method of electronic storage or transmission can be
-            guaranteed to be completely secure. Users should also protect
-            their devices, authentication credentials, and Google Accounts.
-        </p>
-
-
-        <h2>7. Data Retention</h2>
-
-        <p>
-            Locally stored vault data remains on your device until you
-            delete it, uninstall the application, or otherwise remove it
-            using functionality provided by the application or your
-            device.
-        </p>
-
-        <p>
-            Backup data stored in Google Drive may remain there until you
-            delete the backup or use Keeply's available backup management
-            functionality to remove it.
-        </p>
-
-        <p>
-            Keeply does not intentionally retain Google Drive backup data
-            longer than necessary to provide the backup functionality you
-            request.
-        </p>
-
-
-        <h2>8. Data Deletion</h2>
-
-        <p>
-            You can delete information stored locally through the
-            application's available deletion functionality or by removing
-            the application and its associated local data from your device,
-            where applicable.
-        </p>
-
-        <p>
-            You may also delete Keeply backup data stored in your Google
-            Drive through the application's available backup management
-            functionality or through the Google services associated with
-            your account, where applicable.
-        </p>
-
-        <p>
-            If you need assistance regarding deletion of data associated
-            with Keeply, contact the developer using the contact information
-            provided by the application.
-        </p>
-
-
-        <h2>9. Google API Services</h2>
-
-        <p>
-            Keeply's use and transfer of information received from Google
-            APIs will comply with the
             <a
-                href="https://developers.google.com/terms/api-services-user-data-policy"
+                href="https://github.com/laithtahatech"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Google API Services User Data Policy
-            </a>,
-            including the Limited Use requirements where applicable.
-        </p>
+                GitHub
+            </a>
 
-        <p>
-            Google services are operated by Google and may be subject to
-            Google's own privacy policies and terms.
-        </p>
-
-
-        <h2>10. Third-Party Services</h2>
-
-        <p>
-            Keeply may integrate with third-party services, including
-            Google Sign-In and Google Drive.
-        </p>
-
-        <p>
-            These services are operated by their respective providers.
-            Their handling of information may also be governed by their
-            own privacy policies and terms.
-        </p>
-
-
-        <h2>11. Children's Privacy</h2>
-
-        <p>
-            Keeply is intended as a personal security and organization
-            application and is not specifically directed toward children.
-        </p>
-
-        <p>
-            We do not knowingly collect personal information from children
-            in violation of applicable law.
-        </p>
-
-
-        <h2>12. Changes to This Privacy Policy</h2>
-
-        <p>
-            This Privacy Policy may be updated when Keeply's functionality
-            or data practices change.
-        </p>
-
-        <p>
-            When changes are made, the updated policy will be published on
-            this page and the "Last updated" date will be changed.
-        </p>
-
-
-        <h2>13. Contact</h2>
-
-        <p>
-            If you have questions about this Privacy Policy or Keeply's
-            data practices, please contact the Keeply developer through
-            the developer contact information provided in the application
-            or its Google OAuth configuration.
-        </p>
-
-    </div>
-</main>
-
-<footer>
-    <div class="container">
-
-        <div>
-            © 2026 Keeply
-        </div>
-
-        <div>
-            <a href="index.html">Home</a>
-            <a href="terms.html">Terms of Service</a>
         </div>
 
     </div>
+
 </footer>
 
 </body>
